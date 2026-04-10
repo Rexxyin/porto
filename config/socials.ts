@@ -29,8 +29,8 @@ export const socialsConfig: SocialLink[] = [
   {
     id: "peerlist",
     platform: "Peerlist",
-    handle: "@prateekjn",
-    href: "https://peerlist.io/prateekjn",
+    handle: "@hookflo",
+    href: "https://peerlist.io/hookflo",
     icon: "peerlist",
     action: "external",
     order: 3,
@@ -39,14 +39,14 @@ export const socialsConfig: SocialLink[] = [
   {
     id: "discord",
     platform: "Discord",
-    handle: "@prateekjn",
+    handle: "@hookflo",
     icon: "discord",
     action: "copy",
-    copyValue: "prateekjn",
+    copyValue: "hookflo",
     shortcutKey: "C",
     tooltipDefault: "Copy username",
     order: 4,
-    enabled: true,
+    enabled: false,
   },
   {
     id: "email",
@@ -68,6 +68,6 @@ export const socialsConfig: SocialLink[] = [
     action: "external",
     tooltipDefault: "Visit Reddit profile",
     order: 6,
-    enabled: true,
+    enabled: false,
   },
 ];

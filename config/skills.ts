@@ -16,7 +16,7 @@ export const skillsConfig: SkillItem[] = [
   },
   {
     id: "ai-sdk",
-    name: "Framer Motion",
+    name: "AI SDK integrations",
     icon: "ai-sdk",
     order: 4,
     enabled: true,
@@ -31,15 +31,14 @@ export const skillsConfig: SkillItem[] = [
   { id: "shadcn", name: "shadcn/ui", icon: "shadcn", order: 6, enabled: true },
   {
     id: "better-auth",
-    name: "Figma-to-code systems",
+    name: "Design systems",
     icon: "better-auth",
     order: 7,
     enabled: true,
   },
-  { id: "prisma", name: "Prisma", icon: "prisma", order: 8, enabled: true },
-  { id: "trpc", name: "TRPC", icon: "trpc", order: 9, enabled: true },
- { id: "chat-gpt", name: "Claude", icon: "claude", order: 10, enabled: true },
-  { id: "tanstack", name: "Tanstack", icon: "tanstack", order: 11, enabled: true },
+  { id: "prisma", name: "Prisma", icon: "prisma", order: 8, enabled: false },
+  { id: "trpc", name: "tRPC", icon: "trpc", order: 9, enabled: false },
+  { id: "chat-gpt", name: "Claude", icon: "claude", order: 10, enabled: true },
+  { id: "tanstack", name: "TanStack", icon: "tanstack", order: 11, enabled: true },
   { id: "cursor", name: "Cursor", icon: "cursor", order: 12, enabled: true },
 ];
-

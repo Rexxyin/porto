@@ -8,52 +8,53 @@ export const projectsSectionConfig = {
 
 export const projectsConfig: Project[] = [
   {
-    id: "oss-design-system",
-    title: "Open UI System — Design-to-code foundation",
+    id: "tern-framework",
+    title: "Tern — AI-native framework for product teams",
     description:
-      "Reusable design system and starter architecture built to ship premium interfaces faster with consistency.",
+      "A modern framework from Hookflo to ship AI-powered products faster, with design-system quality and production-ready developer ergonomics.",
     content:
-      "## Problem\nTeams lose quality and time when each product surface is designed and implemented differently.\n\n## Solution\nI created an open-source UI foundation with reusable components, theming tokens, interaction patterns, and implementation guides.\n\n## Outcome\nThis project improved delivery speed, reduced UI inconsistencies, and became a shared baseline for future product work.",
+      "## Problem\nTeams building AI products spend too much time stitching together architecture, patterns, and interface decisions.\n\n## Solution\nI contributed to Tern as a framework-first foundation with strong defaults, clean developer workflows, and product-grade UI standards.\n\n## Outcome\nTern gives builders a faster path from idea to shipped product while preserving quality, consistency, and maintainability.",
     image: "/gridly.png",
-    githubUrl: "https://github.com/prateekjn",
+    githubUrl: "https://github.com/Hookflo/tern",
     imageAlt: "Gridly - SaaS Starter Kit",
-    liveUrl: "https://prateekjn.me",
-    tags: ["Design Systems", "Next.js", "TypeScript", "Open Source"],
+    liveUrl: "https://tern.hookflo.com/",
+    tags: ["Framework", "Open Source", "Developer Experience", "Design Engineering"],
     metrics: [
-      { icon: "chart", label: "Faster design-to-code cycles" },
-      { icon: "users", label: "Used across multiple builds" },
+      { icon: "chart", label: "Faster AI product scaffolding" },
+      { icon: "users", label: "Community-first open-source build" },
     ],
     order: 1,
     enabled: true,
   },
   {
-    id: "oss-product-template",
-    title: "Product Launch Template — UX-first starter",
+    id: "tern-cli",
+    title: "Tern CLI — ship-ready scaffolding in minutes",
     description:
-      "Open-source template for shipping polished product pages and dashboards with strong UX defaults.",
+      "Command-line tooling focused on reducing setup friction and helping teams launch dependable product foundations.",
     content:
-      "## Problem\nMany teams move quickly but launch interfaces that lack trust, hierarchy, and polish.\n\n## Solution\nI built a launch-ready template with opinionated UX patterns, responsive layout primitives, and scalable frontend architecture.\n\n## Outcome\nThe template helped teams move from idea to usable product surfaces faster while preserving brand quality.",
+      "## Problem\nGetting started with modern architecture is still noisy and repetitive for most teams.\n\n## Solution\nTern CLI codifies setup best practices into a fast, guided workflow for generating high-quality project foundations.\n\n## Outcome\nTeams can move from blank repository to production-ready baseline significantly faster with fewer setup mistakes.",
     image: "/zeno.png",
     imageAlt: "Zeno SaaS Boilerplate",
-    liveUrl: "https://prateekjn.me",
-    tags: ["UX", "Frontend Architecture", "Open Source"],
+    liveUrl: "https://tern.hookflo.com/",
+    githubUrl: "https://github.com/Hookflo/tern",
+    tags: ["CLI", "Automation", "Open Source", "Developer Tooling"],
     metrics: [
-      { icon: "users", label: "Adopted by builders and indie teams" },
-      { icon: "chart", label: "Reduced launch friction" },
+      { icon: "users", label: "Improved onboarding for builders" },
+      { icon: "chart", label: "Reduced setup friction" },
     ],
     order: 2,
     enabled: true,
   },
   {
-    id: "oss-performance-kit",
-    title: "Performance UI Kit — Fast by default",
+    id: "portfolio-design-system",
+    title: "Design Engineering Portfolio System",
     description:
-      "A component and optimization kit focused on speed, accessibility, and premium interaction quality.",
+      "My personal design-engineered portfolio system focused on storytelling, speed, and open-source visibility.",
     content:
-      "## Problem\nDesign-heavy interfaces often feel sluggish when performance and accessibility are treated as afterthoughts.\n\n## Solution\nI built reusable patterns for animation, rendering efficiency, and accessibility that keep interfaces both expressive and fast.\n\n## Outcome\nThis toolkit helped preserve visual quality while improving usability and runtime performance across product pages.",
+      "## Problem\nMost portfolio sites fail to communicate impact quickly and don't balance design craft with engineering depth.\n\n## Solution\nI rebuilt my portfolio with clearer narrative structure, stronger project hierarchy, and reusable sections for open-source proof points.\n\n## Outcome\nThe site now highlights impact work first, aligns with my design-engineer positioning, and stays easy to iterate as new projects ship.",
     image: "/root.png",
     imageAlt: "Root - Math Drill Engine",
-    liveUrl: "https://prateekjn.me",
+    liveUrl: "https://prateekjn.me/",
     tags: ["Performance", "Accessibility", "Frontend"],
     metrics: [
       { icon: "users", label: "Improved usability baseline" },

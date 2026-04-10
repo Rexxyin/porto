@@ -1,6 +1,5 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { heroConfig } from "@/config/hero";
 import { siteConfig } from "@/config/site";
@@ -11,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 import { useHaptic } from "react-haptic";
 import { HiMail } from "react-icons/hi";
 import DiscordStatus from "./discord-status";
-import ElectricBorder from "./react-bits/ElectricBorder";
+import { OrbCore } from "./orb-core";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { WritingUnderline } from "./writing-underline";
 
@@ -120,7 +119,7 @@ export function Hero() {
       <div className="flex flex-col items-start gap-6">
         <motion.button
           type="button"
-          aria-label="Play avatar interaction"
+          aria-label="Play orb interaction"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ y: -1.5, scale: 1.015 }}
@@ -145,35 +144,11 @@ export function Hero() {
           }}
           className="no-js-visible micro-press micro-transition-slow relative cursor-pointer rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-foreground/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         >
-          <ElectricBorder
-            color="#EE4B2B"
-            speed={0.2}
-            chaos={0.1}
-            style={{ borderRadius: "50%" }}
-            className={`micro-transition-slow ${isHovered ? "opacity-100" : "opacity-0"}`}
+          <div
+            className={`micro-transition-slow ${isHovered ? "scale-[1.02]" : "scale-100"}`}
           >
-            <Avatar className="size-24 shrink-0 border-foreground/50 bg-background shadow-xl">
-              <AvatarImage
-                src={siteConfig.personal.avatar.src}
-                alt={siteConfig.personal.avatar.alt}
-              />
-              <AvatarFallback>
-                {siteConfig.personal.avatar.fallback}
-              </AvatarFallback>
-            </Avatar>
-          </ElectricBorder>
-
-          <Avatar
-            className={`micro-transition-slow absolute inset-0 size-24 shrink-0 ring-1 ring-border/50 ring-offset-1 ring-offset-background bg-background shadow-xl ${isHovered ? "pointer-events-none opacity-0" : "opacity-100"}`}
-          >
-            <AvatarImage
-              src={siteConfig.personal.avatar.src}
-              alt={siteConfig.personal.avatar.alt}
-            />
-            <AvatarFallback>
-              {siteConfig.personal.avatar.fallback}
-            </AvatarFallback>
-          </Avatar>
+            <OrbCore />
+          </div>
         </motion.button>
 
         <audio src="/electric.mp3" ref={audioRef} loop preload="auto" />
@@ -257,9 +232,9 @@ export function Hero() {
             transition={{ ...entryTransition, delay: 0.28 }}
           >
             <Button asChild size="lg">
-              <Link href="mailto:adityakodez@gmail.com">
+              <Link href="mailto:hello@prateekjn.me">
                 <HiMail className="size-5" />
-                <span className="text-sm">Discuss your MVP</span>
+                <span className="text-sm">Discuss your next build</span>
               </Link>
             </Button>
           </motion.div>
