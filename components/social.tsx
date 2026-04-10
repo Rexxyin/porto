@@ -142,7 +142,7 @@ const Social = () => {
                     )}
                   </div>
                 ) : (
-                  <ArrowRightIcon className="ml-auto size-3.5 text-muted-foreground/30 micro-transition group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:-rotate-45 group-hover:text-primary group-focus-visible:translate-x-0.5 group-focus-visible:translate-y-0.5 group-focus-visible:-rotate-45 group-focus-visible:text-primary" />
+                  <ArrowRightIcon className="ml-auto size-3.5 text-emerald-500/70 micro-transition group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:-rotate-45 group-hover:text-emerald-400 group-focus-visible:translate-x-0.5 group-focus-visible:translate-y-0.5 group-focus-visible:-rotate-45 group-focus-visible:text-emerald-400" />
                 )}
               </div>
             </motion.div>
@@ -193,4 +193,3 @@ const Social = () => {
 };
 
 export default Social;
-
