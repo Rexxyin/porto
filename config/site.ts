@@ -39,7 +39,7 @@ export const siteConfig: PortfolioConfig = {
       height: 630,
       alt: "Prateek — Design Engineer & Open-Source Builder",
     },
-    twitterCreator: "@prateekjn",
+    twitterCreator: "@Prateek32177",
     icon: "/favicon.svg",
     appleIcon: "/apple-touch-icon.png",
     googleVerification: "google-site-verification-code",
@@ -86,14 +86,14 @@ export const siteConfig: PortfolioConfig = {
     firstName: "Prateek",
     avatar: {
       src: "/profile.avif",
-      alt: "@prateekjn",
+      alt: "@Prateek32177",
       fallback: "PJ",
     },
     location: {
       label: "India",
       timezone: "UTC +5:30",
     },
-    githubUsername: "prateekjn",
+    githubUsername: "Prateek32177",
   },
   sectionOrder: [
     "projects",

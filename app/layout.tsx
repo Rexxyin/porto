@@ -104,9 +104,9 @@ const jsonLd = {
     "Product Design",
   ],
   sameAs: [
-    "https://github.com/prateekjn",
+    "https://github.com/Prateek32177",
     "https://github.com/Hookflo/tern",
-    "https://x.com/prateekjn",
+    "https://x.com/Prateek32177",
     "https://tern.hookflo.com/",
   ],
   image: `${siteConfig.meta.url}/profile.avif`,

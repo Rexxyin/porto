@@ -7,15 +7,15 @@ export const experienceSectionConfig = {
 
 export const experienceConfig: ExperienceItem[] = [
   {
-    id: "indie-builder",
-    role: "Independent Full-Stack Developer",
+    id: "design-engineer",
+    role: "Independent Design Engineer",
     company: "Self-employed",
     period: "2023 — Present",
     summary:
-      "Building and shipping products end-to-end with rapid iteration and strong product feedback loops.",
+      "Designing and shipping products end-to-end with rapid iteration and strong feedback loops.",
     highlights: [
-      "Designed auth and data architecture for multiple SaaS projects",
-      "Shipped MVPs in weeks with production deployments",
+      "Built reusable design systems and high-craft frontend architecture",
+      "Delivered open-source products with measurable community adoption",
     ],
     order: 1,
     enabled: true,

@@ -8,8 +8,8 @@ export const socialsConfig: SocialLink[] = [
   {
     id: "github",
     platform: "GitHub",
-    handle: "@prateekjn",
-    href: "https://github.com/prateekjn",
+    handle: "@Prateek32177",
+    href: "https://github.com/Prateek32177",
     icon: "github",
     action: "external",
     order: 1,
@@ -18,8 +18,8 @@ export const socialsConfig: SocialLink[] = [
   {
     id: "x",
     platform: "X (Twitter)",
-    handle: "@prateekjn",
-    href: "https://x.com/prateekjn",
+    handle: "@Prateek32177",
+    href: "https://x.com/Prateek32177",
     icon: "x",
     action: "external",
     tooltipDefault: "Message on X",

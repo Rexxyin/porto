@@ -1,6 +1,5 @@
 const GITHUB_GRAPHQL_API = "https://api.github.com/graphql";
-const GITHUB_PUBLIC_CONTRIB_ENDPOINT =
-  "https://github.com/users/%s/contributions?from=%s&to=%s";
+const GITHUB_PUBLIC_CONTRIB_ENDPOINT = "https://github.com/users";
 
 const QUERY = `
   query($username: String!, $from: DateTime, $to: DateTime) {
@@ -88,9 +87,9 @@ async function fetchGithubPublicData(
   to: Date,
 ): Promise<Contribution[]> {
   const endpoint = GITHUB_PUBLIC_CONTRIB_ENDPOINT
-    .replace("%s", username)
-    .replace("%s", from.toISOString().slice(0, 10))
-    .replace("%s", to.toISOString().slice(0, 10));
+    .concat(`/${username}/contributions`)
+    .concat(`?from=${from.toISOString().slice(0, 10)}`)
+    .concat(`&to=${to.toISOString().slice(0, 10)}`);
 
   const response = await fetch(endpoint, {
     next: { revalidate: 3600 },
@@ -104,16 +103,22 @@ async function fetchGithubPublicData(
   }
 
   const svg = await response.text();
-  const matches = [...svg.matchAll(/data-date="([^"]+)"[^>]*data-count="(\d+)"/g)];
+  const rects = [...svg.matchAll(/<rect[^>]*>/g)];
 
-  return matches.map((match) => {
-    const count = Number(match[2] ?? 0);
-    return {
-      date: match[1] ?? "",
-      count,
-      level: getIntensityLevel(count),
-    };
-  });
+  return rects
+    .map((rectMatch) => rectMatch[0])
+    .map((rect) => {
+      const date = rect.match(/data-date="([^"]+)"/)?.[1];
+      const count = Number(rect.match(/data-count="(\d+)"/)?.[1] ?? 0);
+      if (!date) return null;
+
+      return {
+        date,
+        count,
+        level: getIntensityLevel(count),
+      };
+    })
+    .filter((item): item is Contribution => item !== null);
 }
 
 function getIntensityLevel(count: number): 0 | 1 | 2 | 3 | 4 {

@@ -13,10 +13,10 @@ export const projectsConfig: Project[] = [
     description:
       "A modern framework from Hookflo to ship AI-powered products faster, with design-system quality and production-ready developer ergonomics.",
     content:
-      "## Problem\nTeams building AI products spend too much time stitching together architecture, patterns, and interface decisions.\n\n## Solution\nI contributed to Tern as a framework-first foundation with strong defaults, clean developer workflows, and product-grade UI standards.\n\n## Outcome\nTern gives builders a faster path from idea to shipped product while preserving quality, consistency, and maintainability.",
+      "## Problem\nTeams building AI products spend too much time stitching together architecture, patterns, and interface decisions.\n\n## Solution\nI contributed to Tern as a framework-first foundation with strong defaults, clean developer workflows, and product-grade UI standards.\n\n## Outcome\nTern gives teams a faster path from idea to shipped product while preserving quality, consistency, and maintainability.",
     image: "/gridly.png",
     githubUrl: "https://github.com/Hookflo/tern",
-    imageAlt: "Gridly - SaaS Starter Kit",
+    imageAlt: "Tern framework",
     liveUrl: "https://tern.hookflo.com/",
     tags: ["Framework", "Open Source", "Developer Experience", "Design Engineering"],
     metrics: [
@@ -34,12 +34,12 @@ export const projectsConfig: Project[] = [
     content:
       "## Problem\nGetting started with modern architecture is still noisy and repetitive for most teams.\n\n## Solution\nTern CLI codifies setup best practices into a fast, guided workflow for generating high-quality project foundations.\n\n## Outcome\nTeams can move from blank repository to production-ready baseline significantly faster with fewer setup mistakes.",
     image: "/zeno.png",
-    imageAlt: "Zeno SaaS Boilerplate",
+    imageAlt: "Tern CLI",
     liveUrl: "https://tern.hookflo.com/",
     githubUrl: "https://github.com/Hookflo/tern",
     tags: ["CLI", "Automation", "Open Source", "Developer Tooling"],
     metrics: [
-      { icon: "users", label: "Improved onboarding for builders" },
+      { icon: "users", label: "Improved onboarding for teams" },
       { icon: "chart", label: "Reduced setup friction" },
     ],
     order: 2,
