@@ -139,7 +139,7 @@ export function Bookmarks() {
                         </p>
                       </div>
 
-                      <ArrowRightIcon className="ml-auto size-3.5 text-muted-foreground/30 transition-all group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:-rotate-45 group-hover:text-primary" />
+                      <ArrowRightIcon className="ml-auto size-3.5 text-emerald-500/70 transition-all group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:-rotate-45 group-hover:text-emerald-400" />
                     </div>
                   </Link>
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-muted-foreground/5" />

@@ -36,14 +36,32 @@ const staticSections: Record<Exclude<SectionId, "github">, ReactElement> = {
 };
 
 export default async function Home() {
-  const shouldRenderGithub =
-    siteConfig.sectionFlags.github && Boolean(process.env.GITHUB_TOKEN);
+  const shouldRenderGithub = siteConfig.sectionFlags.github;
   const contributionData = shouldRenderGithub
     ? await fetchGithubData(siteConfig.personal.githubUsername)
     : [];
 
   return (
     <>
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 h-full w-full opacity-[0.06] mix-blend-soft-light"
+      >
+        <filter id="noise-filter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="1.2"
+            numOctaves={4}
+            stitchTiles="stitch"
+          />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.45" />
+          </feComponentTransfer>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noise-filter)" />
+      </svg>
+
       <main
         id="main-content"
         className="relative min-h-dvh gap-y-4 flex flex-col max-w-3xl mx-auto border-x-2 border-b-2 overflow-hidden pt-[env(safe-area-inset-top)]"

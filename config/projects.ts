@@ -1,63 +1,64 @@
 import type { Project } from "@/config/types";
 
 export const projectsSectionConfig = {
-  title: "Selected Builds",
+  title: "Open-Source Impact",
   liveButtonLabel: "View Product",
   liveTooltip: "Open project",
 };
 
 export const projectsConfig: Project[] = [
   {
-    id: "gridly",
-    title: "Gridly — The Premium SaaS Boilerplate",
+    id: "tern-framework",
+    title: "Tern — AI-native framework for product teams",
     description:
-      "Open-source SaaS starter kit built to remove the slowest part of shipping a new product: auth, payments, schemas, and AI setup.",
+      "A modern framework from Hookflo to ship AI-powered products faster, with design-system quality and production-ready developer ergonomics.",
     content:
-      "## Problem\nEvery new SaaS idea starts with the same invisible tax: auth, schema design, payments, and baseline product scaffolding before the real feature even exists.\n\n## Solution\nI built Gridly as an open-source starter kit with authentication, Prisma models, Polar payments, AI SDK wiring, and a clean UI foundation. The goal was to remove repetitive setup work so a founder or developer can start from the first business feature instead of week-one plumbing.\n\n## Outcome\nGridly compresses the first build phase into hours instead of days and shows how I structure reusable product foundations, not just one-off pages. It is also a public proof point of how I think about shipping modern SaaS systems end to end.",
+      "## Problem\nTeams building AI products spend too much time stitching together architecture, patterns, and interface decisions.\n\n## Solution\nI contributed to Tern as a framework-first foundation with strong defaults, clean developer workflows, and product-grade UI standards.\n\n## Outcome\nTern gives teams a faster path from idea to shipped product while preserving quality, consistency, and maintainability.",
     image: "/gridly.png",
-    githubUrl: "https://github.com/AdityaKodez/gridly",
-    imageAlt: "Gridly - SaaS Starter Kit",
-    liveUrl: "https://gridly.akoder.xyz/",
-    tags: ["Next.js", "TypeScript", "Prisma", "Payments", "Open Source"],
+    githubUrl: "https://github.com/Hookflo/tern",
+    imageAlt: "Tern framework",
+    liveUrl: "https://tern.hookflo.com/",
+    tags: ["Framework", "Open Source", "Developer Experience", "Design Engineering"],
     metrics: [
-      { icon: "chart", label: "40+ setup hours removed" },
-      { icon: "users", label: "MIT licensed" },
+      { icon: "chart", label: "Faster AI product scaffolding" },
+      { icon: "users", label: "Community-first open-source build" },
     ],
     order: 1,
     enabled: true,
   },
   {
-    id: "zeno",
-    title: "Zeno — Accountability tracker for builders",
+    id: "tern-cli",
+    title: "Tern CLI — ship-ready scaffolding in minutes",
     description:
-      "Self-initiated SaaS app for builders who want a lightweight way to log work, keep streaks, and review performance over time.",
+      "Command-line tooling focused on reducing setup friction and helping teams launch dependable product foundations.",
     content:
-      "## Problem\nSolo builders often know what they should be doing, but the feedback loop is weak. Most productivity tools are either too bloated, too generic, or disconnected from actual shipping habits.\n\n## Solution\nI built Zeno around one clear workflow: log meaningful work, preserve momentum with streaks, and surface performance trends through simple analytics. The product forced me to design authentication, streak logic, dashboards, and the data model as one connected system instead of isolated features.\n\n## Outcome\nZeno reached early usage with active builders and repeated logs, which gave me real feedback on onboarding, retention loops, and how a product evolves after launch. It is the clearest example of me shipping a full-stack product, then learning from actual behavior instead of stopping at the first deploy.",
+      "## Problem\nGetting started with modern architecture is still noisy and repetitive for most teams.\n\n## Solution\nTern CLI codifies setup best practices into a fast, guided workflow for generating high-quality project foundations.\n\n## Outcome\nTeams can move from blank repository to production-ready baseline significantly faster with fewer setup mistakes.",
     image: "/zeno.png",
-    imageAlt: "Zeno SaaS Boilerplate",
-    liveUrl: "https://zeno.akoder.xyz/",
-    tags: ["Next.js", "TypeScript", "Analytics", "Self-initiated"],
+    imageAlt: "Tern CLI",
+    liveUrl: "https://tern.hookflo.com/",
+    githubUrl: "https://github.com/Hookflo/tern",
+    tags: ["CLI", "Automation", "Open Source", "Developer Tooling"],
     metrics: [
-      { icon: "users", label: "20+ active builders" },
-      { icon: "chart", label: "200+ logs recorded" },
+      { icon: "users", label: "Improved onboarding for teams" },
+      { icon: "chart", label: "Reduced setup friction" },
     ],
     order: 2,
     enabled: true,
   },
   {
-    id: "root",
-    title: "Root — Math Drill Engine",
+    id: "portfolio-design-system",
+    title: "Design Engineering Portfolio System",
     description:
-      "Practice product built to test how students respond to timed drills, simple feedback loops, and distraction-free study flows.",
+      "My personal design-engineered portfolio system focused on storytelling, speed, and open-source visibility.",
     content:
-      "## Problem\nStudents lose momentum when practice tools are noisy, slow, or overloaded with features that distract from repetition and pattern recognition.\n\n## Solution\nI built Root around timed drills, simple question flows, and lightweight feedback loops. The interface is intentionally stripped down so the product supports practice discipline instead of competing for attention.\n\n## Outcome\nWith early student usage and repeat sessions, Root gave me signal on education UX, session design, and how behavior data should shape the next iteration of the product. It also shows that I can build beyond generic SaaS dashboards when the product demands a different interaction model.",
+      "## Problem\nMost portfolio sites fail to communicate impact quickly and don't balance design craft with engineering depth.\n\n## Solution\nI rebuilt my portfolio with clearer narrative structure, stronger project hierarchy, and reusable sections for open-source proof points.\n\n## Outcome\nThe site now highlights impact work first, aligns with my design-engineer positioning, and stays easy to iterate as new projects ship.",
     image: "/root.png",
     imageAlt: "Root - Math Drill Engine",
-    liveUrl: "https://root.akoder.xyz/",
-    tags: ["Education", "UX Research", "Data Modeling", "Self-initiated"],
+    liveUrl: "https://prateekjn.me/",
+    tags: ["Performance", "Accessibility", "Frontend"],
     metrics: [
-      { icon: "users", label: "50+ students" },
-      { icon: "chart", label: "50+ practice sessions" },
+      { icon: "users", label: "Improved usability baseline" },
+      { icon: "chart", label: "Smoother perceived performance" },
     ],
     order: 3,
     enabled: true,

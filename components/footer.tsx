@@ -10,10 +10,8 @@ export function Footer() {
           <div className="space-y-1">
         
             <p className="max-w-lg text-sm text-muted-foreground">
-
-              {siteConfig.personal.fullName} builds scoped SaaS MVPs from
-              {" "}
-              {siteConfig.personal.location.label}.
+              {siteConfig.personal.fullName} crafts human-centered digital
+              products from {siteConfig.personal.location.label}.
             </p>
             <p className="text-sm text-muted-foreground">
 © {new Date().getFullYear()} {siteConfig.personal.fullName}

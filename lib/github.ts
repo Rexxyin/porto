@@ -1,4 +1,5 @@
 const GITHUB_GRAPHQL_API = "https://api.github.com/graphql";
+const GITHUB_PUBLIC_CONTRIB_ENDPOINT = "https://github.com/users";
 
 const QUERY = `
   query($username: String!, $from: DateTime, $to: DateTime) {
@@ -27,13 +28,13 @@ export async function fetchGithubData(
   username: string,
 ): Promise<Contribution[]> {
   const token = process.env.GITHUB_TOKEN;
-  if (!token) {
-    throw new Error("GITHUB_TOKEN is missing");
-  }
-
   const now = new Date();
   const from = new Date(now);
   from.setFullYear(now.getFullYear() - 1);
+
+  if (!token) {
+    return fetchGithubPublicData(username, from, now);
+  }
 
   const response = await fetch(GITHUB_GRAPHQL_API, {
     method: "POST",
@@ -56,7 +57,7 @@ export async function fetchGithubData(
 
   if (json.errors) {
     console.error("GitHub API Errors:", json.errors);
-    return [];
+    return fetchGithubPublicData(username, from, now);
   }
 
   const weeks =
@@ -78,6 +79,46 @@ export async function fetchGithubData(
     ...day,
     level: getIntensityLevel(day.count),
   }));
+}
+
+async function fetchGithubPublicData(
+  username: string,
+  from: Date,
+  to: Date,
+): Promise<Contribution[]> {
+  const endpoint = GITHUB_PUBLIC_CONTRIB_ENDPOINT
+    .concat(`/${username}/contributions`)
+    .concat(`?from=${from.toISOString().slice(0, 10)}`)
+    .concat(`&to=${to.toISOString().slice(0, 10)}`);
+
+  const response = await fetch(endpoint, {
+    next: { revalidate: 3600 },
+    headers: {
+      "User-Agent": "portfolio",
+    },
+  });
+
+  if (!response.ok) {
+    return [];
+  }
+
+  const svg = await response.text();
+  const rects = [...svg.matchAll(/<rect[^>]*>/g)];
+
+  return rects
+    .map((rectMatch) => rectMatch[0])
+    .map((rect) => {
+      const date = rect.match(/data-date="([^"]+)"/)?.[1];
+      const count = Number(rect.match(/data-count="(\d+)"/)?.[1] ?? 0);
+      if (!date) return null;
+
+      return {
+        date,
+        count,
+        level: getIntensityLevel(count),
+      };
+    })
+    .filter((item): item is Contribution => item !== null);
 }
 
 function getIntensityLevel(count: number): 0 | 1 | 2 | 3 | 4 {
