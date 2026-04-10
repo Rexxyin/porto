@@ -65,7 +65,7 @@ const statusConfig: Record<
   dnd: {
     icon: Focus,
     label: "Deep Work",
-    iconClassName: "text-red-500",
+    iconClassName: "text-emerald-400",
   },
   offline: {
     icon: Moon,
