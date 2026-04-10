@@ -1,7 +1,7 @@
 import type { SkillItem } from "@/config/types";
 
 export const skillsSectionConfig = {
-  title: "Stack",
+  title: "Design Engineering Stack",
 };
 
 export const skillsConfig: SkillItem[] = [
@@ -16,7 +16,7 @@ export const skillsConfig: SkillItem[] = [
   },
   {
     id: "ai-sdk",
-    name: "AI SDK",
+    name: "Framer Motion",
     icon: "ai-sdk",
     order: 4,
     enabled: true,
@@ -31,7 +31,7 @@ export const skillsConfig: SkillItem[] = [
   { id: "shadcn", name: "shadcn/ui", icon: "shadcn", order: 6, enabled: true },
   {
     id: "better-auth",
-    name: "better-auth",
+    name: "Figma-to-code systems",
     icon: "better-auth",
     order: 7,
     enabled: true,
@@ -42,5 +42,4 @@ export const skillsConfig: SkillItem[] = [
   { id: "tanstack", name: "Tanstack", icon: "tanstack", order: 11, enabled: true },
   { id: "cursor", name: "Cursor", icon: "cursor", order: 12, enabled: true },
 ];
-
 

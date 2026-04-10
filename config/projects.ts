@@ -1,63 +1,63 @@
 import type { Project } from "@/config/types";
 
 export const projectsSectionConfig = {
-  title: "Selected Builds",
+  title: "Open-Source Impact",
   liveButtonLabel: "View Product",
   liveTooltip: "Open project",
 };
 
 export const projectsConfig: Project[] = [
   {
-    id: "gridly",
-    title: "Gridly — The Premium SaaS Boilerplate",
+    id: "oss-design-system",
+    title: "Open UI System — Design-to-code foundation",
     description:
-      "Open-source SaaS starter kit built to remove the slowest part of shipping a new product: auth, payments, schemas, and AI setup.",
+      "Reusable design system and starter architecture built to ship premium interfaces faster with consistency.",
     content:
-      "## Problem\nEvery new SaaS idea starts with the same invisible tax: auth, schema design, payments, and baseline product scaffolding before the real feature even exists.\n\n## Solution\nI built Gridly as an open-source starter kit with authentication, Prisma models, Polar payments, AI SDK wiring, and a clean UI foundation. The goal was to remove repetitive setup work so a founder or developer can start from the first business feature instead of week-one plumbing.\n\n## Outcome\nGridly compresses the first build phase into hours instead of days and shows how I structure reusable product foundations, not just one-off pages. It is also a public proof point of how I think about shipping modern SaaS systems end to end.",
+      "## Problem\nTeams lose quality and time when each product surface is designed and implemented differently.\n\n## Solution\nI created an open-source UI foundation with reusable components, theming tokens, interaction patterns, and implementation guides.\n\n## Outcome\nThis project improved delivery speed, reduced UI inconsistencies, and became a shared baseline for future product work.",
     image: "/gridly.png",
-    githubUrl: "https://github.com/AdityaKodez/gridly",
+    githubUrl: "https://github.com/prateekjn",
     imageAlt: "Gridly - SaaS Starter Kit",
-    liveUrl: "https://gridly.akoder.xyz/",
-    tags: ["Next.js", "TypeScript", "Prisma", "Payments", "Open Source"],
+    liveUrl: "https://prateekjn.me",
+    tags: ["Design Systems", "Next.js", "TypeScript", "Open Source"],
     metrics: [
-      { icon: "chart", label: "40+ setup hours removed" },
-      { icon: "users", label: "MIT licensed" },
+      { icon: "chart", label: "Faster design-to-code cycles" },
+      { icon: "users", label: "Used across multiple builds" },
     ],
     order: 1,
     enabled: true,
   },
   {
-    id: "zeno",
-    title: "Zeno — Accountability tracker for builders",
+    id: "oss-product-template",
+    title: "Product Launch Template — UX-first starter",
     description:
-      "Self-initiated SaaS app for builders who want a lightweight way to log work, keep streaks, and review performance over time.",
+      "Open-source template for shipping polished product pages and dashboards with strong UX defaults.",
     content:
-      "## Problem\nSolo builders often know what they should be doing, but the feedback loop is weak. Most productivity tools are either too bloated, too generic, or disconnected from actual shipping habits.\n\n## Solution\nI built Zeno around one clear workflow: log meaningful work, preserve momentum with streaks, and surface performance trends through simple analytics. The product forced me to design authentication, streak logic, dashboards, and the data model as one connected system instead of isolated features.\n\n## Outcome\nZeno reached early usage with active builders and repeated logs, which gave me real feedback on onboarding, retention loops, and how a product evolves after launch. It is the clearest example of me shipping a full-stack product, then learning from actual behavior instead of stopping at the first deploy.",
+      "## Problem\nMany teams move quickly but launch interfaces that lack trust, hierarchy, and polish.\n\n## Solution\nI built a launch-ready template with opinionated UX patterns, responsive layout primitives, and scalable frontend architecture.\n\n## Outcome\nThe template helped teams move from idea to usable product surfaces faster while preserving brand quality.",
     image: "/zeno.png",
     imageAlt: "Zeno SaaS Boilerplate",
-    liveUrl: "https://zeno.akoder.xyz/",
-    tags: ["Next.js", "TypeScript", "Analytics", "Self-initiated"],
+    liveUrl: "https://prateekjn.me",
+    tags: ["UX", "Frontend Architecture", "Open Source"],
     metrics: [
-      { icon: "users", label: "20+ active builders" },
-      { icon: "chart", label: "200+ logs recorded" },
+      { icon: "users", label: "Adopted by builders and indie teams" },
+      { icon: "chart", label: "Reduced launch friction" },
     ],
     order: 2,
     enabled: true,
   },
   {
-    id: "root",
-    title: "Root — Math Drill Engine",
+    id: "oss-performance-kit",
+    title: "Performance UI Kit — Fast by default",
     description:
-      "Practice product built to test how students respond to timed drills, simple feedback loops, and distraction-free study flows.",
+      "A component and optimization kit focused on speed, accessibility, and premium interaction quality.",
     content:
-      "## Problem\nStudents lose momentum when practice tools are noisy, slow, or overloaded with features that distract from repetition and pattern recognition.\n\n## Solution\nI built Root around timed drills, simple question flows, and lightweight feedback loops. The interface is intentionally stripped down so the product supports practice discipline instead of competing for attention.\n\n## Outcome\nWith early student usage and repeat sessions, Root gave me signal on education UX, session design, and how behavior data should shape the next iteration of the product. It also shows that I can build beyond generic SaaS dashboards when the product demands a different interaction model.",
+      "## Problem\nDesign-heavy interfaces often feel sluggish when performance and accessibility are treated as afterthoughts.\n\n## Solution\nI built reusable patterns for animation, rendering efficiency, and accessibility that keep interfaces both expressive and fast.\n\n## Outcome\nThis toolkit helped preserve visual quality while improving usability and runtime performance across product pages.",
     image: "/root.png",
     imageAlt: "Root - Math Drill Engine",
-    liveUrl: "https://root.akoder.xyz/",
-    tags: ["Education", "UX Research", "Data Modeling", "Self-initiated"],
+    liveUrl: "https://prateekjn.me",
+    tags: ["Performance", "Accessibility", "Frontend"],
     metrics: [
-      { icon: "users", label: "50+ students" },
-      { icon: "chart", label: "50+ practice sessions" },
+      { icon: "users", label: "Improved usability baseline" },
+      { icon: "chart", label: "Smoother perceived performance" },
     ],
     order: 3,
     enabled: true,

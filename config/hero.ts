@@ -2,12 +2,15 @@ import type { HeroConfig } from "@/config/types";
 import { MdWavingHand } from "react-icons/md";
 
 export const heroConfig: HeroConfig = {
-  greeting: "Hello, I'm Aditya Ojha",
+  greeting: "Hey, I’m Prateek",
   waveEmoji: MdWavingHand,
-  headlineBefore: "I help",
-  highlightedPhrases: ["early-stage founders launch SaaS MVPs", "2–4 weeks"],
-  headlineAfter: "with clear scope and clean handoff.",
+  headlineBefore: "I design and engineer",
+  highlightedPhrases: [
+    "impactful open-source products",
+    "experiences users remember",
+  ],
+  headlineAfter: "from zero to shipped.",
   description:
-    "Best for founders who need auth, billing, dashboards, and core workflows shipped without agency overhead.",
-  descriptionHighlight: "founders",
+    "Design-engineering portfolio focused on product craft, measurable impact, and open-source work.",
+  descriptionHighlight: "open-source",
 };
